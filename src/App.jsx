@@ -135,6 +135,7 @@ const WeatherApp = () => {
                 </Grid>
               ))}
             </Grid>
+            <div className="text-center">Powerd by <b className="text-blue-600"> LD</b></div>
           </div>
         )}
         {nearbyWeather.length === 0 && weatherData && (
@@ -142,6 +143,7 @@ const WeatherApp = () => {
             No nearby weather information available.
           </Typography>
         )}
+        
       </div>
     </>
   );
