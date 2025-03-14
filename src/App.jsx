@@ -5,7 +5,6 @@ import Button from "@mui/material/Button"; // Using Material UI button
 import Grid from "@mui/material/Grid"; // Using Material UI grid
 import Typography from "@mui/material/Typography"; // Using Material UI typography
 import CircularProgress from "@mui/material/CircularProgress"; // Using Material UI loading indicator
-
 const apiKey = "fb908565af4964151fc930b967e3b18f";
 const apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
@@ -61,7 +60,7 @@ const WeatherApp = () => {
 
   return (
     <>
-      <div className="w-full mt-6 mb-6 lg:items-center ">
+      <div className="w-full pt-10 mb-6 lg:items-center dark:bg-white dark:text-black">
         <div className="justify-center items-center">
           <div className="mx-auto max-w-md overflow-hidden rounded-xl shadow-md md:max-w-2xl flex justify-items-center p-4 gap-6">
             <TextField
@@ -135,7 +134,9 @@ const WeatherApp = () => {
                 </Grid>
               ))}
             </Grid>
-            <div className="text-center">Powerd by <b className="text-blue-600"> LD</b></div>
+            <div className="text-center">
+              Powerd by <b className="text-blue-600"> LD</b>
+            </div>
           </div>
         )}
         {nearbyWeather.length === 0 && weatherData && (
@@ -143,7 +144,6 @@ const WeatherApp = () => {
             No nearby weather information available.
           </Typography>
         )}
-        
       </div>
     </>
   );
